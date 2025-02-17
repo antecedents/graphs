@@ -36,6 +36,15 @@ dropdown.on('change', function(e){
 });
 
 
+// Graphs
+function generateChart(fileNameKey) {
 
+    $.getJSON('../../warehouse/series/decomposition/' + fileNameKey + '.json', function (source) {
+
+    }).fail(function () {
+        console.log("Missing");
+    });
+
+}
 
 
