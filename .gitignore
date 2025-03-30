@@ -7,3 +7,10 @@ node_modules
 # Generated files
 .psci
 output
+
+# IntelliJ IDEA
+.idea
+
+# Testing
+script.sh
+warehouse/
