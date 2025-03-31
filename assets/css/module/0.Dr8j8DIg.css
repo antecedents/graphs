@@ -1,16 +1,19 @@
-@import"https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap";
-@import"https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
 
 /*
  * Body
  */
 body {
     background-color: #ffffff;
-    font-family: Alegreya, sans-serif, 'Noto Sans', 'Cormorant Garamond', 'EB Garamond', Vollkorn, -apple-system, Inter, BlinkMacSystemFont, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family: 'Fira Mono', Inter, sans-serif, 'Noto Sans', 'Cormorant Garamond', 'EB Garamond', Vollkorn, -apple-system, Inter, BlinkMacSystemFont, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     line-height: 1.5;
     width: 1200px;
     margin: 0 auto;
-    font-size: 17px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #35383b;
 }
 
 a:link,
