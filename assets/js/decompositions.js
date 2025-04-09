@@ -174,7 +174,7 @@ function generateChart(fileNameKey) {
                     x: 7
                 },
                 min: 0,
-                height: '23%',
+                height: '33%',
                 lineWidth: 2,
                 resize: {
                     enabled: true
@@ -189,8 +189,8 @@ function generateChart(fileNameKey) {
                     align: 'middle',
                     x: 7
                 },
-                top: '25%',
-                height: '23%',
+                top: '35%',
+                height: '21%',
                 offset: 0,
                 lineWidth: 2
             }, {
@@ -199,8 +199,8 @@ function generateChart(fileNameKey) {
                     align: 'middle',
                     x: 7
                 },
-                top: '50%',
-                height: '23%',
+                top: '57%',
+                height: '21%',
                 offset: 0,
                 lineWidth: 2
             }, {
@@ -213,8 +213,8 @@ function generateChart(fileNameKey) {
                     align: 'middle',
                     x: 7
                 },
-                top: '75%',
-                height: '23%',
+                top: '79%',
+                height: '21%',
                 offset: 0,
                 lineWidth: 2
             }
