@@ -2,7 +2,7 @@
   "content": [
     {"label":  "PROBLEM STATEMENT, ETC."},
     {"label":  "MODEL"},
-    {"label":  "<ul style='list-style-type: none; padding-left: 13px; margin-top: -15px;'><li><a href='../src/model-details.html'>brief details</a></li><li><a href=''>mathematics</a></li><li>error metrics</li><li>business metrics</li></ul>"},
+    {"label":  "<ul style='list-style-type: none; padding-left: 13px; margin-top: -15px;'><li><a href='../src/model-details.html'>brief details</a></li><li>mathematics</li><li>error metrics</li><li>business metrics</li></ul>"},
     {"label":  "DATA"},
     {"label": "<ul style='list-style-type: none; padding-left: 13px; margin-top: -15px;'><li><a href='../src/data-details.html'>details</a><br></li><li><a href='../src/data-profile.html'>profile</a></li><li>drift</li></ul>"},
     {"label":  "SYSTEM ARCHITECTURE & COST"},
