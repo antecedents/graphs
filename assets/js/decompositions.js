@@ -149,9 +149,8 @@ function generateChart(fileNameKey) {
             caption: {
                 // verticalAlign: "top",
                 // y: 35,
-                text: '<p>The graphs illustrate accident & emergency attendance counts in Scotland, ' +
-                    '<i>Attendances</i>, plausible decomposition patterns, Trend & Seasons, ' +
-                    'and Residues thereof.</p>'
+                text: '<p>The graphs illustrate accident & emergency attendance counts in Scotland, </p>' +
+                    '<p>and plausible decomposition patterns; trend & seasons, and residues thereof.</p>'
             },
 
             exporting: {
