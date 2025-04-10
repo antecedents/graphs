@@ -4,12 +4,11 @@ table {
     border-collapse: collapse;
     border-spacing: 25px 9px;
     border: 0;
-    display: table;
     margin-left: 65px;
     margin-top: 25px;
     font-size: 15px;
     table-layout: fixed;
-    width: 90%;
+    width: 85%;
     text-wrap: wrap;
 }
 
@@ -29,4 +28,18 @@ table.aside {
     table-layout: fixed;
     width: 90%;
     text-wrap: wrap;
+}
+
+
+#data {
+    font-family: 'EB Garamond', Vollkorn, Alegreya, sans-serif, 'Noto Sans', 'Cormorant Garamond', -apple-system, Inter, BlinkMacSystemFont, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    /*border-collapse: collapse;
+    border-spacing: 25px 9px;
+    border: 0;
+    margin-left: 65px;
+    margin-top: 25px;
+    font-size: 15px;
+    table-layout: fixed;
+    width: 85%;
+    text-wrap: wrap;*/
 }
