@@ -6,11 +6,11 @@
     },
     {
       "section": "outcome expectations, underlying aims",
-      "description": "<b>Outcome Expectations:</b> Effective anticipatory actions, and contingency planning, for 4 or more weeks ahead.<br><br><b>Underlying Aim:</b> The automatic prediction of attendance numbers; objective &#8594; <ul><li>weekly ...</li><li>model metrics ...</li></ul>"
+      "description": "<b>Outcome Expectations:</b> Effective anticipatory actions, and contingency planning, for 4 or more weeks ahead.<br><br><b>Underlying Aim:</b> The automatic prediction of attendance numbers; objective &#8594; "
     },
     {
       "section": "deployment goal<br>",
-      "description": "A potential machine learning dependent project without a deployment goal is directionless, do not proceed.  The deployment goal is ..."
+      "description": "The deployment goal is ..."
     }
   ]
 }
