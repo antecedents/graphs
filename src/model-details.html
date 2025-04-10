@@ -89,8 +89,8 @@
     <!-- content -->
     <div class="layout-item">
 
-      <h2>Brief Model Details</h2>
-      <pre id="model"></pre>
+      <h2 class="project-head">Brief Model Details</h2>
+      <pre id="data"></pre>
       <script>
           fetch('../descriptors/model.json')
               .then(response => response.json())
@@ -141,7 +141,7 @@
               });
 
               // Append the table to the HTML document
-              document.getElementById('model').appendChild(table);
+              document.getElementById('data').appendChild(table);
           }
       </script>
 
