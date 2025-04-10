@@ -264,9 +264,10 @@ function generateChart(fileNameKey){
 
             series: [{
                     type: 'arearange',
-                    name: 'Predictions Boundaries (TR)',
+                    name: '<i>S</i> + <i>T</i> predictions (TR)',
                     data: estimate,
                     color: '#6B8E23',
+                    visible: false,
                     yAxis: 0,
                     dataGrouping: {
                         units: groupingUnits,
@@ -307,10 +308,10 @@ function generateChart(fileNameKey){
                 },
                 {
                     type: 'arearange',
-                    name: 'Predictions Boundaries (TE)',
+                    name: '<i>S</i> + <i>T</i> predictions (TE)',
                     data: t_estimate,
                     color: '#917808',
-                    visible: true,
+                    visible: false,
                     yAxis: 0,
                     dataGrouping: {
                         units: groupingUnits
@@ -341,10 +342,10 @@ function generateChart(fileNameKey){
                 },
                 {
                     type: 'arearange',
-                    name: 'Future Predictions Boundaries',
+                    name: '<i>S</i> + <i>T</i> predictions (Future)',
                     data: f_estimate,
                     color: '#ffa500',
-                    visible: true,
+                    visible: false,
                     yAxis: 0,
                     dataGrouping: {
                         units: groupingUnits
@@ -357,7 +358,7 @@ function generateChart(fileNameKey){
                 },
                 {
                     type: 'arearange',
-                    name: 'inter-decile (tr)',
+                    name: 'inter-decile band est. (TR)',
                     data: decile,
                     color: '#6B8E23',
                     yAxis: 0,
@@ -372,7 +373,7 @@ function generateChart(fileNameKey){
                 },
                 {
                     type: 'arearange',
-                    name: 'inter-decile (te)',
+                    name: 'inter-decile band est. (TE)',
                     data: t_decile,
                     color: '#917808',
                     yAxis: 0,
@@ -387,7 +388,7 @@ function generateChart(fileNameKey){
                 },
                 {
                     type: 'arearange',
-                    name: 'inter-decile (fu)',
+                    name: 'inter-decile band est. (Future)',
                     data: f_decile,
                     color: '#ffa500',
                     yAxis: 0,
@@ -402,7 +403,7 @@ function generateChart(fileNameKey){
                 },
                 {
                     type: 'arearange',
-                    name: 'inter-quartile (tr)',
+                    name: 'inter-quartile band est. (TR)',
                     data: quartile,
                     color: '#6B8E23',
                     fillOpacity: 0.50,
@@ -418,7 +419,7 @@ function generateChart(fileNameKey){
                 },
                 {
                     type: 'arearange',
-                    name: 'inter-quartile (te)',
+                    name: 'inter-quartile band est. (TE)',
                     data: t_quartile,
                     color: '#917808',
                     fillOpacity: 0.50,
@@ -434,7 +435,7 @@ function generateChart(fileNameKey){
                 },
                 {
                     type: 'arearange',
-                    name: 'inter-quartile (fu)',
+                    name: 'inter-quartile band est. (Future)',
                     data: f_quartile,
                     color: '#ffa500',
                     fillOpacity: 0.50,
