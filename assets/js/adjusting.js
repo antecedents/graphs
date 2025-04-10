@@ -49,13 +49,16 @@ function generateChart(fileNameKey){
             estimate = [],
             decile = [],
             quartile = [],
+            whisker = [],
             t_observations = [],
             t_estimate = [],
             t_decile = [],
             t_quartile = [],
+            t_whisker = [],
             f_estimate = [],
             f_decile = [],
             f_quartile = [],
+            f_whisker = [],
             groupingUnits = [[
                 'week',                         // unit name
                 [1]                            // allowed multiples
@@ -92,6 +95,12 @@ function generateChart(fileNameKey){
                 source['estimates'].data[i][utr] + source['u_quartile'] // upper
             ]);
 
+            whisker.push([
+                source['estimates'].data[i][0], // date
+                source['estimates'].data[i][ltr] + source['l_whisker'], // lower
+                source['estimates'].data[i][utr] + source['u_whisker'] // upper
+            ]);
+
         }
 
 
@@ -125,6 +134,12 @@ function generateChart(fileNameKey){
                 source['tests'].data[j][ute] + source['u_quartile'] // upper
             ]);
 
+            t_whisker.push([
+                source['tests'].data[j][0], // date
+                source['tests'].data[j][lte] + source['l_whisker'], // lower
+                source['tests'].data[j][ute] + source['u_whisker'] // upper
+            ]);
+
         }
 
 
@@ -151,6 +166,12 @@ function generateChart(fileNameKey){
                 source['futures'].data[k][tsf], // date
                 source['futures'].data[k][ltf] + source['l_quartile'], // lower
                 source['futures'].data[k][utf] + source['u_quartile'] // upper
+            ]);
+
+            f_whisker.push([
+                source['futures'].data[k][tsf], // date
+                source['futures'].data[k][ltf] + source['l_whisker'], // lower
+                source['futures'].data[k][utf] + source['u_whisker'] // upper
             ]);
 
         }
@@ -439,6 +460,57 @@ function generateChart(fileNameKey){
                     data: f_quartile,
                     color: '#ffa500',
                     fillOpacity: 0.50,
+                    yAxis: 0,
+                    dataGrouping: {
+                        units: groupingUnits
+                    },
+                    tooltip: {
+                        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
+                            'Upper Boundary: {point.high:,.2f}<br/>' +
+                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                    }
+                },
+                {
+                    type: 'arearange',
+                    name: 'whisker band est. (TR)',
+                    data: whisker,
+                    color: '#6B8E23',
+                    visible: false,
+                    fillOpacity: 0.25,
+                    yAxis: 0,
+                    dataGrouping: {
+                        units: groupingUnits
+                    },
+                    tooltip: {
+                        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
+                            'Upper Boundary: {point.high:,.2f}<br/>' +
+                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                    }
+                },
+                {
+                    type: 'arearange',
+                    name: 'whisker band est. (TE)',
+                    data: t_whisker,
+                    color: '#917808',
+                    visible: false,
+                    fillOpacity: 0.25,
+                    yAxis: 0,
+                    dataGrouping: {
+                        units: groupingUnits
+                    },
+                    tooltip: {
+                        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
+                            'Upper Boundary: {point.high:,.2f}<br/>' +
+                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                    }
+                },
+                {
+                    type: 'arearange',
+                    name: 'whisker band est. (Future)',
+                    data: f_whisker,
+                    color: '#ffa500',
+                    visible: false,
+                    fillOpacity: 0.25,
                     yAxis: 0,
                     dataGrouping: {
                         units: groupingUnits
