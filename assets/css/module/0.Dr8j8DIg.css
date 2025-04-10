@@ -21,6 +21,12 @@ a:active {
     text-decoration: none
 }
 
+a.hover:hover {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
+
+
 .by {
     width: 100%;
     text-align: left;
@@ -66,6 +72,10 @@ a:active {
 
 h2 {
     font-variant: small-caps;
+}
+
+.project-head {
+    margin-left: 65px;
 }
 
 h3 {
