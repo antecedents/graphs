@@ -149,8 +149,8 @@ function generateChart(fileNameKey) {
             caption: {
                 // verticalAlign: "top",
                 // y: 35,
-                text: '<p>The graphs herein illustrate accident & emergency attendance counts in Scotland, and plausible ' +
-                    'decomposition patterns vis-à-vis Scotland\'s attendance counts.</p>'
+                text: '<p>The graphs illustrate accident & emergency attendance counts in Scotland, <i>Attendances</i>, plausible ' +
+                    'decomposition patterns, Trend & Seasons, and Residues thereof.</p>'
             },
 
             exporting: {
@@ -194,6 +194,10 @@ function generateChart(fileNameKey) {
                 offset: 0,
                 lineWidth: 2
             }, {
+                labels: {
+                    align: 'left',
+                    x: 5
+                },
                 title: {
                     text: 'Seasons',
                     align: 'middle',
