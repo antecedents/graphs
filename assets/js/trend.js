@@ -280,7 +280,8 @@ function generateChart(fileNameKey){
                     name: 'Trend',
                     data: trend,
                     marker: {
-                        enabled: true
+                        enabled: true,
+                        radius: 1
                     },
                     lineWidth: 1,
                     color: '#000000',
