@@ -46,6 +46,7 @@ function generateChart(fileNameKey){
 
         // split the data set into ohlc and medians
         let trend = [],
+            percentage = [],
             training = [],
             testing = [],
             futures = [],
@@ -58,7 +59,9 @@ function generateChart(fileNameKey){
         let ctr = source['estimates'].columns;
         let ltr = ctr.indexOf('l_tc_estimate'),
             utr = ctr.indexOf('u_tc_estimate'),
-            rtr = ctr.indexOf('trend');
+            rtr = ctr.indexOf('trend'),
+            lep = ctr.indexOf('l_tc_ep'),
+            uep = ctr.indexOf('u_tc_ep');
 
         for (var i = 0; i < source['estimates'].data.length; i += 1) {
 
@@ -66,6 +69,12 @@ function generateChart(fileNameKey){
                 source['estimates'].data[i][0], // date
                 source['estimates'].data[i][ltr], // lower
                 source['estimates'].data[i][utr] // upper
+            ]);
+
+            percentage.push([
+                source['estimates'].data[i][0], // date
+                source['estimates'].data[i][lep], // lower
+                source['estimates'].data[i][uep] // upper
             ]);
 
             trend.push({
@@ -179,11 +188,26 @@ function generateChart(fileNameKey){
                     x: 0
                 },
                 // min: 0,
-                height: '90%',
+                height: '60%',
                 lineWidth: 2,
                 resize: {
                     enabled: true
                 }
+            },
+            {
+                labels: {
+                    align: 'left',
+                    x: 5
+                },
+                title: {
+                    text: 'error<br>(%)',
+                    align: 'middle',
+                    x: 7
+                },
+                top: '65%',
+                height: '30%',
+                offset: 0,
+                lineWidth: 2
             }
             ],
 
@@ -212,6 +236,7 @@ function generateChart(fileNameKey){
                 type: 'arearange',
                 name: 'The training phase predictions',
                 data: training,
+                color: '#6B8E23',
                 dataGrouping: {
                     units: groupingUnits,
                     dateTimeLabelFormats: {
@@ -236,7 +261,7 @@ function generateChart(fileNameKey){
                     type: 'arearange',
                     name: 'The testing phase predictions',
                     data: testing,
-                    color: '#000000',
+                    color: '#917808',
                     visible: true,
                     yAxis: 0,
                     dataGrouping: {
@@ -254,7 +279,11 @@ function generateChart(fileNameKey){
                     type: 'spline',
                     name: 'Trend',
                     data: trend,
-                    color: '#6B8E23',
+                    marker: {
+                        enabled: true
+                    },
+                    lineWidth: 1,
+                    color: '#000000',
                     yAxis: 0,
                     dataGrouping: {
                         units: groupingUnits
@@ -269,9 +298,25 @@ function generateChart(fileNameKey){
                     type: 'arearange',
                     name: 'Futures',
                     data: futures,
-                    color: '#A08E23',
+                    color: '#ffa500',
                     visible: true,
                     yAxis: 0,
+                    dataGrouping: {
+                        units: groupingUnits
+                    },
+                    tooltip: {
+                        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
+                            'Upper Boundary: {point.high:,.2f}<br/>' +
+                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                    }
+                },
+
+                {
+                    type: 'arearange',
+                    name: 'Percentage Error (TR)',
+                    data: percentage,
+                    color: '#6B8E23',
+                    yAxis: 1,
                     dataGrouping: {
                         units: groupingUnits
                     },
