@@ -234,7 +234,7 @@ function generateChart(fileNameKey){
 
             series: [{
                 type: 'arearange',
-                name: 'The training phase predictions',
+                name: 'trend predictions (TR)',
                 data: training,
                 color: '#6B8E23',
                 dataGrouping: {
@@ -259,7 +259,7 @@ function generateChart(fileNameKey){
 
                 {
                     type: 'arearange',
-                    name: 'The testing phase predictions',
+                    name: 'trend predictions (TE)',
                     data: testing,
                     color: '#917808',
                     visible: true,
@@ -277,11 +277,11 @@ function generateChart(fileNameKey){
 
                 {
                     type: 'spline',
-                    name: 'Trend',
+                    name: 'ground truth (TR)',
                     data: trend,
                     marker: {
                         enabled: true,
-                        radius: 1
+                        radius: 0.1
                     },
                     lineWidth: 1,
                     color: '#000000',
@@ -297,7 +297,7 @@ function generateChart(fileNameKey){
 
                 {
                     type: 'arearange',
-                    name: 'Futures',
+                    name: 'trend predictions (future)',
                     data: futures,
                     color: '#ffa500',
                     visible: true,
@@ -314,7 +314,7 @@ function generateChart(fileNameKey){
 
                 {
                     type: 'arearange',
-                    name: 'Percentage Error (TR)',
+                    name: 'error percentages (TR)',
                     data: percentage,
                     color: '#6B8E23',
                     yAxis: 1,
