@@ -47,11 +47,15 @@ function generateChart(fileNameKey){
         // split the data set into ...
         let observations = [],
             estimate = [],
-            percentage = [],
+            decile = [],
+            quartile = [],
             t_observations = [],
             t_estimate = [],
-            t_percentage = [],
+            t_decile = [],
+            t_quartile = [],
             f_estimate = [],
+            f_decile = [],
+            f_quartile = [],
             groupingUnits = [[
                 'week',                         // unit name
                 [1]                            // allowed multiples
@@ -61,9 +65,7 @@ function generateChart(fileNameKey){
         let ctr = source['estimates'].columns;
         let ltr = ctr.indexOf('l_estimate'),
             utr = ctr.indexOf('u_estimate'),
-            otr = ctr.indexOf('n_attendances'), // original
-            lpr = ctr.indexOf('l_e_ep'),
-            upr = ctr.indexOf('u_e_ep'); // percentage error
+            otr = ctr.indexOf('n_attendances');
 
         for (var i = 0; i < source['estimates'].data.length; i += 1) {
 
@@ -78,20 +80,25 @@ function generateChart(fileNameKey){
                 y: source['estimates'].data[i][otr] // original values
             });
 
-            percentage.push([
+            decile.push([
                 source['estimates'].data[i][0], // date
-                source['estimates'].data[i][lpr],
-                source['estimates'].data[i][upr]
+                source['estimates'].data[i][ltr] + source['l_m_decile'], // lower
+                source['estimates'].data[i][utr] + source['u_m_decile'] // upper
             ]);
+
+            quartile.push([
+                source['estimates'].data[i][0], // date
+                source['estimates'].data[i][ltr] + source['l_quartile'], // lower
+                source['estimates'].data[i][utr] + source['u_quartile'] // upper
+            ]);
+
         }
 
 
         let cte = source['tests'].columns;
         let lte = cte.indexOf('l_estimate'),
             ute = cte.indexOf('u_estimate'),
-            ote = cte.indexOf('n_attendances'), // original
-            lpe = cte.indexOf('l_e_ep'),
-            upe = cte.indexOf('u_e_ep'); // percentage error
+            ote = cte.indexOf('n_attendances'); // percentage error
 
         for (var j = 0; j < source['tests'].data.length; j += 1) {
 
@@ -106,11 +113,18 @@ function generateChart(fileNameKey){
                 y: source['tests'].data[j][ote] // original values
             });
 
-            t_percentage.push([
+            t_decile.push([
                 source['tests'].data[j][0], // date
-                source['tests'].data[j][lpe],
-                source['tests'].data[j][upe]
+                source['tests'].data[j][lte] + source['l_m_decile'], // lower
+                source['tests'].data[j][ute] + source['u_m_decile'] // upper
             ]);
+
+            t_quartile.push([
+                source['tests'].data[j][0], // date
+                source['tests'].data[j][lte] + source['l_quartile'], // lower
+                source['tests'].data[j][ute] + source['u_quartile'] // upper
+            ]);
+
         }
 
 
@@ -125,6 +139,18 @@ function generateChart(fileNameKey){
                 source['futures'].data[k][tsf], // date
                 source['futures'].data[k][ltf], // lower
                 source['futures'].data[k][utf] // upper
+            ]);
+
+            f_decile.push([
+                source['futures'].data[k][tsf], // date
+                source['futures'].data[k][ltf] + source['l_m_decile'], // lower
+                source['futures'].data[k][utf] + source['u_m_decile'] // upper
+            ]);
+
+            f_quartile.push([
+                source['futures'].data[k][tsf], // date
+                source['futures'].data[k][ltf] + source['l_quartile'], // lower
+                source['futures'].data[k][utf] + source['u_quartile'] // upper
             ]);
 
         }
@@ -198,35 +224,21 @@ function generateChart(fileNameKey){
             },
 
             yAxis: [{
-                labels: {
-                    align: 'left',
-                    x: 9
-                },
-                title: {
-                    text: 'attendances<br>(counts)',
-                    x: 0
-                },
-                // min: 0,
-                height: '60%',
-                lineWidth: 2,
-                resize: {
-                    enabled: true
+                    labels: {
+                        align: 'left',
+                        x: 9
+                    },
+                    title: {
+                        text: 'attendances<br>(counts)',
+                        x: 0
+                    },
+                    // min: 0,
+                    height: '90%',
+                    lineWidth: 2,
+                    resize: {
+                        enabled: true
+                    }
                 }
-            }, {
-                labels: {
-                    align: 'left',
-                    x: 5
-                },
-                title: {
-                    text: 'error<br>(%)',
-                    align: 'middle',
-                    x: 7
-                },
-                top: '65%',
-                height: '30%',
-                offset: 0,
-                lineWidth: 2
-            }
             ],
 
             plotOptions:{
@@ -345,10 +357,10 @@ function generateChart(fileNameKey){
                 },
                 {
                     type: 'arearange',
-                    name: 'Percentage Error (TR)',
-                    data: percentage,
+                    name: 'inter-decile (tr)',
+                    data: decile,
                     color: '#6B8E23',
-                    yAxis: 1,
+                    yAxis: 0,
                     dataGrouping: {
                         units: groupingUnits
                     },
@@ -360,10 +372,73 @@ function generateChart(fileNameKey){
                 },
                 {
                     type: 'arearange',
-                    name: 'Percentage Error (TE)',
-                    data: t_percentage,
+                    name: 'inter-decile (te)',
+                    data: t_decile,
                     color: '#917808',
-                    yAxis: 1,
+                    yAxis: 0,
+                    dataGrouping: {
+                        units: groupingUnits
+                    },
+                    tooltip: {
+                        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
+                            'Upper Boundary: {point.high:,.2f}<br/>' +
+                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                    }
+                },
+                {
+                    type: 'arearange',
+                    name: 'inter-decile (fu)',
+                    data: f_decile,
+                    color: '#ffa500',
+                    yAxis: 0,
+                    dataGrouping: {
+                        units: groupingUnits
+                    },
+                    tooltip: {
+                        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
+                            'Upper Boundary: {point.high:,.2f}<br/>' +
+                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                    }
+                },
+                {
+                    type: 'arearange',
+                    name: 'inter-quartile (tr)',
+                    data: quartile,
+                    color: '#6B8E23',
+                    fillOpacity: 0.50,
+                    yAxis: 0,
+                    dataGrouping: {
+                        units: groupingUnits
+                    },
+                    tooltip: {
+                        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
+                            'Upper Boundary: {point.high:,.2f}<br/>' +
+                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                    }
+                },
+                {
+                    type: 'arearange',
+                    name: 'inter-quartile (te)',
+                    data: t_quartile,
+                    color: '#917808',
+                    fillOpacity: 0.50,
+                    yAxis: 0,
+                    dataGrouping: {
+                        units: groupingUnits
+                    },
+                    tooltip: {
+                        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
+                            'Upper Boundary: {point.high:,.2f}<br/>' +
+                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                    }
+                },
+                {
+                    type: 'arearange',
+                    name: 'inter-quartile (fu)',
+                    data: f_quartile,
+                    color: '#ffa500',
+                    fillOpacity: 0.50,
+                    yAxis: 0,
                     dataGrouping: {
                         units: groupingUnits
                     },
