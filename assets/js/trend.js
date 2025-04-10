@@ -147,8 +147,7 @@ function generateChart(fileNameKey){
             },
 
             subtitle: {
-                text: '<p>Scotland</p> <br/> ' +
-                    '<p><b>Underlying Data</b>: Public Health Scotland Weekly A&E Numbers</p>'
+                text: '<p>Scotland</p><br/>'
             },
 
             time: {
@@ -168,6 +167,10 @@ function generateChart(fileNameKey){
                 // x: 35
             },
 
+            caption: {
+                text: '<p>TR: Training, TE: Testing </p>'
+            },
+
             exporting: {
                 buttons: {
                     contextButton: {
@@ -184,7 +187,7 @@ function generateChart(fileNameKey){
                     x: 9
                 },
                 title: {
-                    text: optionSelected,
+                    text: 'trend<br>attendances',
                     x: 0
                 },
                 // min: 0,
@@ -252,8 +255,8 @@ function generateChart(fileNameKey){
                 },
                 tooltip: {
                     pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                        'Upper Boundary: {point.high:,.2f}<br/>' +
-                        'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                        'Upper Boundary: {point.high:,.0f}<br/>' +
+                        'Lower Boundary: {point.low:,.0f}' + '<br/>'
                 }
             },
 
@@ -269,8 +272,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 },
 
@@ -281,7 +284,7 @@ function generateChart(fileNameKey){
                     data: trend,
                     marker: {
                         enabled: true,
-                        radius: 0.1
+                        radius: 0.2
                     },
                     lineWidth: 1,
                     color: '#000000',
@@ -291,7 +294,7 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b>: ' +
-                            '{point.y:,.2f}<br/>'
+                            '{point.y:,.0f}<br/>'
                     }
                 },
 
@@ -307,8 +310,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 },
 
@@ -323,8 +326,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 }
             ],
