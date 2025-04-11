@@ -149,8 +149,8 @@ function generateChart(fileNameKey) {
             caption: {
                 // verticalAlign: "top",
                 // y: 35,
-                text: '<p>The graphs herein illustrate accident & emergency attendance counts in Scotland, and plausible ' +
-                    'decomposition patterns vis-à-vis Scotland\'s attendance counts.</p>'
+                text: '<p>The graphs illustrate accident & emergency attendance counts in Scotland, </p>' +
+                    '<p>and plausible decomposition patterns; trend & seasons, and residues thereof.</p>'
             },
 
             exporting: {
@@ -174,7 +174,7 @@ function generateChart(fileNameKey) {
                     x: 7
                 },
                 min: 0,
-                height: '23%',
+                height: '33%',
                 lineWidth: 2,
                 resize: {
                     enabled: true
@@ -189,18 +189,22 @@ function generateChart(fileNameKey) {
                     align: 'middle',
                     x: 7
                 },
-                top: '25%',
-                height: '23%',
+                top: '35%',
+                height: '21%',
                 offset: 0,
                 lineWidth: 2
             }, {
+                labels: {
+                    align: 'left',
+                    x: 5
+                },
                 title: {
                     text: 'Seasons',
                     align: 'middle',
                     x: 7
                 },
-                top: '50%',
-                height: '23%',
+                top: '57%',
+                height: '21%',
                 offset: 0,
                 lineWidth: 2
             }, {
@@ -213,8 +217,8 @@ function generateChart(fileNameKey) {
                     align: 'middle',
                     x: 7
                 },
-                top: '75%',
-                height: '23%',
+                top: '79%',
+                height: '21%',
                 offset: 0,
                 lineWidth: 2
             }

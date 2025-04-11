@@ -6,9 +6,9 @@
  */
 body {
     background-color: #ffffff;
-    font-family: Alegreya, sans-serif, 'Noto Sans', 'Cormorant Garamond', 'EB Garamond', Vollkorn, -apple-system, Inter, BlinkMacSystemFont, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family: 'EB Garamond', Vollkorn, Alegreya, sans-serif, 'Noto Sans', 'Cormorant Garamond', -apple-system, Inter, BlinkMacSystemFont, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     line-height: 1.5;
-    width: 1200px;
+    width: 73.5%;
     margin: 0 auto;
     font-size: 17px;
 }
@@ -21,9 +21,11 @@ a:active {
     text-decoration: none
 }
 
-img {
-    width: 100%
+a.hover:hover {
+    text-decoration: underline;
+    text-decoration-style: dashed;
 }
+
 
 .by {
     width: 100%;
@@ -33,10 +35,10 @@ img {
 
 .layout {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 185px auto auto;
     align-content: flex-start;
-    gap: 35px
+    gap: 60px
 }
 
 .layout-item {
@@ -55,8 +57,8 @@ img {
 }
 
 .layout-reference {
-    border: 0 solid;    
-    border-bottom-width: thin;    
+    border: 0 solid;
+    border-bottom-width: thin;
     padding: 5px;
     text-align: right;
     align-content: flex-end;
@@ -70,6 +72,10 @@ img {
 
 h2 {
     font-variant: small-caps;
+}
+
+.project-head {
+    margin-left: 65px;
 }
 
 h3 {
@@ -90,36 +96,42 @@ dd {
     margin-left: 15px;
 }
 
+
+/* List */
+ul.parent {
+    list-style-type: none;
+    padding: 15px;
+}
+
+ul.child {
+    list-style-type: none;
+    padding: 1px 15px 15px 9px;
+}
+
+li {
+    margin: 5px;
+}
+
+/* iframe */
+iframe {
+    border: 0;
+}
+
+
 /* Caption */
 caption {
     caption-side: bottom;
     text-align: left;
 }
 
-/* Table */
-table {
-    border-collapse: collapse;
-    border-spacing: 5px;
-    border: 0;
-    margin-left: 65px;
-    margin-top: 25px;
-    font-size: 15px;
-}
-
-td,
-th {
-    padding: 5px;
-}
-
 /* wrapper stays 480px wide past 480px wide, centred */
 @media (min-width: 480px) {
 
-
     .wrapper {
-      width: 480px;
-      margin: 10% auto 0 auto;
+        width: 480px;
+        margin: 10% auto 0 auto;
     }
-  }
+}
 
 /* Beyond 768px the layout is changed and the wrapper has a fixed width of 680px.
  *
@@ -140,7 +152,7 @@ th {
     }
 
     body {
-        width: 65%;
+        width: 73.5%;
         padding: 0 20px
     }
 
@@ -201,4 +213,8 @@ select {
     top: -9999px;
     list-style-type: none;
     z-index: 0;
+}
+
+mjx-math.external {
+    font-size: 150%;
 }

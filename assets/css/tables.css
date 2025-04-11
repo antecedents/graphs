@@ -1,0 +1,45 @@
+
+/* Table */
+table {
+    border-collapse: collapse;
+    border-spacing: 25px 9px;
+    border: 0;
+    margin-left: 65px;
+    margin-top: 25px;
+    font-size: 15px;
+    table-layout: fixed;
+    width: 85%;
+    text-wrap: wrap;
+}
+
+th, td {
+    padding: 11px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table.aside {
+    border-collapse: collapse;
+    border-spacing: 11px;
+    border: 0;
+    margin-left: 5px;
+    margin-top: 25px;
+    font-size: 14px;
+    table-layout: fixed;
+    width: 90%;
+    text-wrap: wrap;
+}
+
+
+#data {
+    font-family: 'EB Garamond', Vollkorn, Alegreya, sans-serif, 'Noto Sans', 'Cormorant Garamond', -apple-system, Inter, BlinkMacSystemFont, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    /*border-collapse: collapse;
+    border-spacing: 25px 9px;
+    border: 0;
+    margin-left: 65px;
+    margin-top: 25px;
+    font-size: 15px;
+    table-layout: fixed;
+    width: 85%;
+    text-wrap: wrap;*/
+}

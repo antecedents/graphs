@@ -5,7 +5,7 @@
 
 .frames-grid.svelte-1jxvby2 {
     display: grid;
-    grid-template-columns: 3fr;
+    grid-template-columns: 5fr;
     align-content: flex-start;
 }
 
@@ -13,8 +13,9 @@
     border: 0 solid;
     padding: 5px;
     margin-bottom: 25px;
-    margin-right: 85px;
+    margin-right: 5px;
     text-align: left;
+    width: 90%;
 }
 
 .frames-grid-left.svelte-1jxvby2 {
