@@ -9,20 +9,24 @@
             "description": "Prediction"
         },
         {
+            "section": "architecture",
+            "description": ""
+        },
+        {
+            "section": "operations schedules",
+            "description": "The raw data is updated weekly, and sometimes data numbers are corrected, hence<ul><li><b>Predictions</b>: Weekly, Tuesdays, 9 Weeks Ahead</li><li><b>Model Re-training</b>: Weekly, Tuesdays, Before Predictions</li></ul>"
+        },
+        {
+            "section": "performance",
+            "description": "Error Metrics & Business/Cost Metrics"
+        },
+        {
             "section": "input",
             "description": "The attendance time series of the previous weeks."
         },
         {
             "section": "output",
             "description": "The training phase forecasts, the testing phase predictions, and future predictions (9 weeks ahead)"
-        },
-        {
-            "section": "architecture",
-            "description": ""
-        },
-        {
-            "section": "performance",
-            "description": "Error Metrics & Business/Cost Metrics"
         },
         {
             "section": "dataset",
