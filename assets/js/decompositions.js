@@ -264,7 +264,7 @@ function generateChart(fileNameKey) {
                 },
                 tooltip: {
                     pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name}</b>: ' +
-                        '{point.y:,.0f} unitless<br/>'
+                        '{point.y:,.0f}<br/>'
                 }
             },
                 {
@@ -278,7 +278,7 @@ function generateChart(fileNameKey) {
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name}</b>: ' +
-                            '{point.y:,.2f} unitless<br/>'
+                            '{point.y:,.0f}<br/>'
                     }
                 },
                 {
@@ -293,7 +293,7 @@ function generateChart(fileNameKey) {
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name}</b>: ' +
-                            '{point.y:,.2f} unitless<br/>'
+                            '{point.y:,.0f}<br/>'
                     }
                 },
                 {
@@ -307,7 +307,7 @@ function generateChart(fileNameKey) {
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name}</b>: ' +
-                            '{point.y:,.2f} unitless<br/>'
+                            '{point.y:,.0f}<br/>'
                     }
 
                 }
