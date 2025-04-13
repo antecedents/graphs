@@ -328,7 +328,7 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b>: ' +
-                            '{point.y:,.2f}<br/>'
+                            '{point.y:,.0f}<br/>'
                     }
                 },
                 {
@@ -343,8 +343,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}m<br/>' +
-                            'Lower Boundary: {point.low:,.2f}m' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 },
                 {
@@ -362,7 +362,7 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b>: ' +
-                            '{point.y:,.2f}m<br/>'
+                            '{point.y:,.0f}<br/>'
                     }
                 },
                 {
@@ -377,8 +377,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 },
                 {
@@ -392,8 +392,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 },
                 {
@@ -407,8 +407,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 },
                 {
@@ -422,8 +422,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 },
                 {
@@ -438,8 +438,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 },
                 {
@@ -454,8 +454,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 },
                 {
@@ -470,8 +470,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 },
                 {
@@ -487,8 +487,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 },
                 {
@@ -504,8 +504,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 },
                 {
@@ -521,8 +521,8 @@ function generateChart(fileNameKey){
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                            'Upper Boundary: {point.high:,.2f}<br/>' +
-                            'Lower Boundary: {point.low:,.2f}' + '<br/>'
+                            'Upper Boundary: {point.high:,.0f}<br/>' +
+                            'Lower Boundary: {point.low:,.0f}' + '<br/>'
                     }
                 }
             ],
