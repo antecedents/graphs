@@ -1,7 +1,7 @@
 var Highcharts;
 var optionSelected;
 var dropdown = $('#option_selector');
-var url = '../warehouse/menu/menu.json';
+var url = '../warehouse/decompositions/menu/menu.json';
 
 
 $.getJSON(url, function (data) {
@@ -38,7 +38,7 @@ dropdown.on('change', function (e) {
 function generateChart(fileNameKey) {
 
     // Relative to Amazon S3 (Simple Storage Service) Set Up
-    $.getJSON('../warehouse/points/decompositions/' + fileNameKey + '.json', function (source) {
+    $.getJSON('../warehouse/decompositions/points/' + fileNameKey + '.json', function (source) {
 
         // https://api.highcharts.com/highstock/plotOptions.series.dataLabels
         // https://api.highcharts.com/class-reference/Highcharts.Point#.name
