@@ -114,7 +114,7 @@ function generateChart(fileNameKey){
                 type: 'datetime',
                 dateTimeLabelFormats: {
                     month: '%e. %b',
-                    year: '%b'
+                    year: '%b %Y'
                 },
                 title: {
                     text: 'Date'
