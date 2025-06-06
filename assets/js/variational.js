@@ -178,7 +178,7 @@ function generateChart(fileNameKey){
             },
 
             chart: {
-                zoomType: 'x'
+                zoomType: 'xy'
                 // borderWidth: 2,
                 // marginRight: 100
             },
