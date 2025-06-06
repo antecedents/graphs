@@ -80,7 +80,7 @@ function generateChart(fileNameKey){
             },
 
             title: {
-                text: optionSelected
+                text: source['attributes']['hospital_name']
             },
 
             subtitle: {
@@ -101,7 +101,7 @@ function generateChart(fileNameKey){
                     x: 9
                 },
                 title: {
-                    text: 'attendances',
+                    text: 'weekly<br>attendances',
                     x: 0
                 },
                 lineWidth: 2,
@@ -122,7 +122,7 @@ function generateChart(fileNameKey){
             },
 
             caption: {
-                text: '<p>The weekly attendances at an accident & emergency.</p>'
+                text: '<p></p>'
             },
 
             exporting: {
