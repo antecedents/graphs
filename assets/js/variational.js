@@ -1,3 +1,5 @@
+// noinspection DuplicatedCode
+
 var Highcharts;
 var optionSelected;
 var dropdown = $('#option_selector');
@@ -184,11 +186,11 @@ function generateChart(fileNameKey){
             },
 
             title: {
-                text: 'Predictions: ' + optionSelected
+                text: 'Predictions: ' + source['hospital_name']
             },
 
             subtitle: {
-                text: '<p>Attendances Predictions</p> <br/><br/>'
+                text: '<p>Predicting Weekly Accident & Emergency<br/>Attendance Numbers</p><br/><br/>'
             },
 
             time: {
@@ -201,11 +203,6 @@ function generateChart(fileNameKey){
 
             legend: {
                 enabled: true
-                // align: 'middle',
-                // layout: 'vertical',
-                // verticalAlign: 'bottom',
-                // y: 10,
-                // x: 35
             },
 
             caption: {
@@ -231,7 +228,6 @@ function generateChart(fileNameKey){
                     text: 'attendances<br>',
                     x: 0
                 },
-                // min: 0,
                 height: '60%',
                 lineWidth: 2,
                 resize: {
