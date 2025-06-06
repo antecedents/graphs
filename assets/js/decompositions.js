@@ -119,12 +119,12 @@ function generateChart(fileNameKey) {
             },
 
             title: {
-                text: 'Curves of: ' + optionSelected
+                text: 'Curves of: ' + source['attributes']['hospital_name']
             },
 
             subtitle: {
-                text: '<p>Accident & Emergency Attendance Counts</p> <br/> ' +
-                    '<p><b>and plausible decompositions</b></p>'
+                text: '<p>Plausible decompositions of accident & emergency</p> <br/> ' +
+                    '<p>attendance counts</p>'
             },
 
             time: {
@@ -136,21 +136,11 @@ function generateChart(fileNameKey) {
             },
 
             legend: {
-                enabled: true,
-                width: 500,
-                x: 65
-                // align: 'middle',
-                // layout: 'vertical',
-                // verticalAlign: 'bottom',
-                // y: 10,
-                // x: 35
+                enabled: false
             },
 
             caption: {
-                // verticalAlign: "top",
-                // y: 35,
-                text: '<p>The graphs illustrate accident & emergency attendance counts in Scotland, </p>' +
-                    '<p>and plausible decomposition patterns; trend & seasons, and residues thereof.</p>'
+                text: '<p></p>'
             },
 
             exporting: {
