@@ -31,5 +31,3 @@ jobs:
           aws s3 cp assets s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/assets --recursive
           aws s3 rm s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/src --recursive
           aws s3 cp src s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/src --recursive
-          aws s3 rm s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/descriptors --recursive
-          aws s3 cp descriptors s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/descriptors --recursive
