@@ -28,7 +28,7 @@ function createFooter(data) {
     let row = tableBody.insertRow();
     let cell = row.insertCell();
     cell.classList.add('page-footer');
-    cell.innerHTML = '<span style="font-variant: small-caps;">In Depth</span> | &copy; ' + new Date().getFullYear().toString();
+    cell.innerHTML = '<span style="font-variant: small-caps;">ACCIDENT & EMERGENCY</span> | &copy; ' + new Date().getFullYear().toString();
 
     // Creating table body
     data.forEach(declaration => {
