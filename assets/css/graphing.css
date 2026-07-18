@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url("fonts/Montserrat-Black.eot");
+    src: local("☺"), url("fonts/Montserrat-Black.woff") format("woff"), url("fonts/Montserrat-Black.ttf") format("truetype"), url("fonts/Montserrat-Black.svg") format("svg");
+    font-weight: 900;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("fonts/Montserrat-Bold.eot");
+    src: local("☺"), url("fonts/Montserrat-Bold.woff") format("woff"), url("fonts/Montserrat-Bold.ttf") format("truetype"), url("fonts/Montserrat-Bold.svg") format("svg");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("fonts/Montserrat-Regular.eot");
+    src: local("☺"), url("fonts/Montserrat-Regular.woff") format("woff"), url("fonts/Montserrat-Regular.ttf") format("truetype"), url("fonts/Montserrat-Regular.svg") format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("fonts/Montserrat-Light.eot");
+    src: local("☺"), url("fonts/Montserrat-Light.woff") format("woff"), url("fonts/Montserrat-Light.ttf") format("truetype"), url("fonts/Montserrat-Light.svg") format("svg");
+    font-weight: 300;
+    font-style: normal
+}
+
+
+/* graphs */
+.highcharts-legend-box {
+    width: 265px;
+}
+
+.highcharts-figure {
+    min-width: 320px;
+    max-width: 1325px;
+    margin: 1em auto; /* top & bottom, right & left */
+}
+
+
+/* tables */
+.hcg-container {
+    --ig-default-font-family: Monteserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    --hcg-font-size: 13px;
+}
+
+.hcg-container {
+
+    a {
+        color: #F19E39;
+        text-decoration: none;
+        font-weight: lighter;
+    }
+
+    a:hover {
+        color: #F19E39;
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+    }
+
+}
+
+.hcg-container {
+    .hcg-table {
+        /* Row borders */
+        --ig-row-border: 0;
+
+        /* Header row borders */
+        --ig-header-row-border: 0;
+
+        /* Column borders */
+        --ig-column-border: 0;
+
+        /* Header column borders */
+        --ig-header-column-border: 0;
+
+        border: 0;
+
+    }
+}
+
+.hcg-pagination-wrapper {
+    margin-top: 25px;
+    margin-left: -125px;
+}
+
+.hcg-credits, .highcharts-light .hcg-credits {
+    display: none;
+}
+
+.hcg-container .hcg-table {
+    > tbody > tr > :where(.hcg-cell) {
+        position: relative;
+        line-height: 1em;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+}
+
+
+/* Case https://cdnjs.com/libraries/highstock, https://cdnjs.com/libraries/highcharts */
+.highcharts-axis-resizer {
+    stroke-width: 1pt;
+    stroke: black;
+}
