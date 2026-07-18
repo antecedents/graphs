@@ -1,0 +1,26 @@
+window.MathJax = {
+	loader: {
+		load: ['[tex]/tagformat']
+	},
+	tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']],
+		processEscapes: true,
+		packages:  {
+			'[+]': ['tagformat']
+		},
+		tags: 'ams',
+		tagformat: {
+			tag: (n) => ' ' + n + ' '
+		}
+	},
+	svg: {
+		fontCache: 'global'
+	}
+};
+
+(function () {
+	var script = document.createElement('script');
+	script.src = 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js';
+	script.async = true;
+	document.head.appendChild(script);
+})();
