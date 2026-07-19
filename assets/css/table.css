@@ -128,10 +128,10 @@ table.entre {
 /* Open */
 table.open {
     border-collapse: separate;
-    border-spacing: 15px 15px; /* horizontal, vertical */
+    border-spacing: 7px 15px; /* horizontal, vertical */
     border: 0;
     margin: 0 auto;
-    padding: 0 25px 0 25px;
+    padding: 0 25px 0 0;
     table-layout: auto;
     width: auto;
     text-wrap: wrap;
@@ -153,10 +153,6 @@ table.open {
         display: table;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    td.notes {
-        padding-left: 25px;
     }
 
     td {
