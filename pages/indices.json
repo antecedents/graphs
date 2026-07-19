@@ -13,11 +13,11 @@
         [
             "CONTENT",
             "Predictions",
-            1,
-            1,
+            625,
+            525,
             "Attendance forecasts per accident & emergency centre.",
             "chapter",
-            "/src/pre-ae-predictions.html",
+            "/pages/sections/predictions.html",
             true
         ],
         [
