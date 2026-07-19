@@ -44,9 +44,9 @@ $.getJSON(url, function (source) {
                         colour = '#F19E39';
                     }
 
-                    if (link[0] === 'CONTENT') {
-                        nodes['CONTENT'] = {
-                            id: 'CONTENT',
+                    if (link[0] === 'A & E') {
+                        nodes['A & E'] = {
+                            id: 'A & E',
                             marker: {
                                 radius: 35
                             },
@@ -160,7 +160,7 @@ $.getJSON(url, function (source) {
                 const chart = this, point = chart.point;
                 const selectedNode = chart.series.points.find((point) => point.to === chart.point.id);
                 if (selectedNode) {
-                    return selectedNode.from + '&Rarr; ' + selectedNode.name;
+                    return selectedNode.from + ' ' + selectedNode.to + '<br>' + selectedNode.name;
                 }
 
                 return '<b>' + source['description'] + '</b><br>';
