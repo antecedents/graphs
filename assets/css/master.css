@@ -330,12 +330,14 @@ optgroup {
 .badge {
     display: block;
     margin: 0 0 10px 10px; /* top right bottom left */
-    padding: 10px 20px; /* top & bottom, right & left */
+    padding: 20px 20px; /* top & bottom, right & left */
     border: 1px solid #0f0f0f;
     background: #0f0f0f;
     color: #ffffff;
     text-decoration: none;
-    width: min-content;
+    width: 100px;
+    height: max-content;
+    text-align: center;
 
     a {
         color: #ffffff;
