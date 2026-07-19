@@ -13,14 +13,15 @@
     box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 180, 105, 0.71);
     transform: translateY(-1px);
 }
-.btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
+.btn-outline-primary:focus {
     color: #fff;
     background-color: #ef982e;
     border-color: #ef982e;
     box-shadow: none;
     transform: translateY(0);
 }
-.btn-check:checked + .btn-outline-primary, .btn-check:active + .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show {
+.btn-check:checked + .btn-outline-primary, .btn-check:active + .btn-outline-primary,
+.btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show {
     color: #fff;
     background-color: #ef982e;
     border-color: #ef982e;
