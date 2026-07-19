@@ -1,6 +1,0 @@
-{
-  "content": [
-    {"label": "<li class='menu-header small text-uppercase'><span class='menu-header-text'>Temporary</span></li>"},
-    {"label": "<li class='menu-item'><a href='javascript:void(0)' class='menu-link menu-toggle'><i class='menu-icon tf-icons bx bx-lock-open-alt'></i><div data-i18n='Authentications'>Accident & Emergency</div></a><ul class='menu-sub'><li class='menu-item'><a href='pre-ae-introduction.html' class='menu-link'><div data-i18n='Introduction'>Introduction</div></a></li><li class='menu-item'><a href='pre-ae-predictions.html' class='menu-link'><div data-i18n='Predictions'>Predictions</div></a></li><li class='menu-item'><a href='pre-ae-profiles-measures.html' class='menu-link'><div data-i18n='Profiles: Measures'>Profiles: Measures</div></a></li><li class='menu-item'><a href='pre-ae-profiles-decompositions.html' class='menu-link'><div data-i18n='Profiles: Decompositions'>Profiles: Decompositions</div></a></li></ul></li>"}
-  ]
-}
