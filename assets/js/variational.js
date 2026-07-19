@@ -211,8 +211,6 @@ function generateChart(fileNameKey){
                 zoomType: 'xy',
                 width: 445,
                 height: 695
-                // borderWidth: 2,
-                // marginRight: 100
             },
 
             title: {
