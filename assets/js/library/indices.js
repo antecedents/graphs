@@ -48,7 +48,7 @@ $.getJSON(url, function (source) {
                         nodes['CONTENT'] = {
                             id: 'CONTENT',
                             marker: {
-                                radius: 20
+                                radius: 35
                             },
                             color: 'black',
                             dataLabels: {
@@ -63,7 +63,7 @@ $.getJSON(url, function (source) {
                         nodes[link[1]] = {
                             id: link[1],
                             marker: {
-                                radius: 9
+                                radius: 27
                             },
                             color: colour
                         };
@@ -72,7 +72,7 @@ $.getJSON(url, function (source) {
                             id: 'INTRODUCTION',
                             marker: {
                                 symbol: symbols.get(link[i_level]),
-                                radius: 20
+                                radius: 35
                             },
                             color: '#F19E39',
                             dataLabels: {
@@ -127,8 +127,9 @@ $.getJSON(url, function (source) {
             networkgraph: {
                 keys: source['columns'],
                 layoutAlgorithm: {
-                    maxIterations: 72,
+                    maxIterations: 180,
                     enableSimulation: true,
+                    linkLength: 360,
                     friction: -0.9,
                     gravitationalConstant:
                         document.getElementById(space).scrollWidth < 500 ?
