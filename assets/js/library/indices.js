@@ -149,7 +149,8 @@ $.getJSON(url, function (source) {
                 },
                 marker: {
                     symbol: 'circle'
-                }
+                },
+                cursor: 'pointer'
             }
         },
 
