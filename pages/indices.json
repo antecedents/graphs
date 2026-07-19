@@ -23,11 +23,11 @@
         [
             "CONTENT",
             "Decompositions",
-            1,
-            1,
+            625,
+            600,
             "The approximate decomposition components of each weekly accident & emergency attendance time series.",
             "chapter",
-            "/src/pre-ae-profiles-decompositions.html",
+            "/pages/sections/decompositions.html",
             true
         ],
         [
