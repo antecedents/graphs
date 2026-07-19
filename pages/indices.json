@@ -33,11 +33,11 @@
         [
             "CONTENT",
             "Measures",
-            1,
-            1,
+            625,
+            525,
             "The raw measures, i.e., the weekly attendance counts per accident & emergency centre.",
             "chapter",
-            "/src/pre-ae-profiles-measures.html",
+            "/pages/sections/measures.html",
             true
         ]
     ],
