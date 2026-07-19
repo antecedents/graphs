@@ -27,7 +27,7 @@ select {
     -ms-transition: all 0.15s linear;
     -o-transition: all 0.15s linear;
     transition: all 0.15s linear;
-    font-size: 13px;
+    font-size: 0.85em;
 }
 
 #option_selector:hover {
