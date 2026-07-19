@@ -30,6 +30,5 @@ jobs:
           ls
           aws s3 rm s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/assets --recursive
           aws s3 cp assets s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/assets --recursive
-          aws s3 rm s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/src --recursive
           aws s3 rm s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/pages --recursive
           aws s3 cp pages s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/pages --recursive
