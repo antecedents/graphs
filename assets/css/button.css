@@ -122,13 +122,13 @@ label.btn {
 
 /* .btn-sm */
 
-.btn-sm > .btn {
+.btn-sm, .btn-group-sm > .btn {
     padding: 0.25rem 0.6875rem;
     font-size: 0.75rem;
     border-radius: 0.25rem;
 }
 
-.btn-sm > .btn {
+.btn-sm, .btn-group-sm > .btn {
     padding: 0.25rem 0.6875rem;
     font-size: 0.75rem;
     border-radius: 0.25rem;
@@ -137,7 +137,6 @@ label.btn {
 
 
 /* a */
-
 a {
     text-decoration: none;
 }
