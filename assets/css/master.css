@@ -324,7 +324,7 @@ optgroup {
     grid-template-columns: 5fr;
     grid-template-rows: auto auto;
     background-color: #FFFFFF;
-    padding: 0 125px 5px 125px;
+    padding: 0 85px 5px 85px;
     align-content: flex-start;
 }
 
