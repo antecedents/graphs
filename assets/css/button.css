@@ -20,7 +20,6 @@
     box-shadow: none;
     transform: translateY(0);
 }
-.btn-check:checked + .btn-outline-primary, .btn-check:active + .btn-outline-primary,
 .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show {
     color: #fff;
     background-color: #ef982e;
