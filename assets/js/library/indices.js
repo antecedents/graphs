@@ -164,6 +164,9 @@ $.getJSON(url, function (source) {
                 }
 
                 return '<b>' + source['description'] + '</b><br>';
+            },
+            style: {
+                width: 200
             }
         },
 
