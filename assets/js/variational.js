@@ -272,7 +272,7 @@ function generateChart(fileNameKey){
                     x: 7
                 },
                 top: '65%',
-                height: '30%',
+                height: '25%',
                 offset: 0,
                 lineWidth: 2
             }
