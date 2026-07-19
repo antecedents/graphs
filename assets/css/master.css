@@ -319,9 +319,18 @@ optgroup {
     align-content: flex-start;
 }
 
+.grid-master-element {
+    display: grid;
+    grid-template-columns: 5fr;
+    grid-template-rows: auto auto;
+    background-color: #FFFFFF;
+    padding: 0 125px 5px 125px;
+    align-content: flex-start;
+}
+
 .grid-master-item {
     border: 0 solid;
-    padding: 20px;
+    padding: 5px;
     text-align: left;
 }
 
