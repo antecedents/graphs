@@ -3,7 +3,7 @@
 var Highcharts;
 var optionSelected;
 var dropdown = $('#option_selector');
-var url = '../warehouse/measures/menu/menu.json';
+var url = '/warehouse/measures/menu/menu.json';
 
 
 $.getJSON(url, function (data) {
@@ -39,7 +39,7 @@ dropdown.on('change', function (e) {
 // Generate graphs
 function generateChart(fileNameKey){
 
-    $.getJSON('../warehouse/measures/points/' + fileNameKey + '.json', function (source)  {
+    $.getJSON('/warehouse/measures/points/' + fileNameKey + '.json', function (source)  {
 
 
         // split the data set into ...
@@ -76,7 +76,9 @@ function generateChart(fileNameKey){
 
             chart: {
                 type: 'spline',
-                zoomType: 'xy'
+                zoomType: 'xy',
+                width: 445,
+                height: 525
             },
 
             title: {
