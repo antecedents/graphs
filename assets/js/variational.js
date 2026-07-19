@@ -185,8 +185,8 @@ function generateChart(fileNameKey){
                         title: '6 months'
                     },
                     {
-                        type: 'year',
-                        count: 1.5,
+                        type: 'month',
+                        count: 18,
                         text: '1.5y',
                         title: '1.5 years'
                     }, {
