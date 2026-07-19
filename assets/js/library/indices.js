@@ -160,7 +160,7 @@ $.getJSON(url, function (source) {
                 const chart = this, point = chart.point;
                 const selectedNode = chart.series.points.find((point) => point.to === chart.point.id);
                 if (selectedNode) {
-                    return selectedNode.from + ' ' + selectedNode.to + '<br>' + selectedNode.name;
+                    return '<b>' + selectedNode.from + ' Series: ' + selectedNode.to + '</b><br>' + selectedNode.name;
                 }
 
                 return '<b>' + source['description'] + '</b><br>';
