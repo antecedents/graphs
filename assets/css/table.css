@@ -128,15 +128,15 @@ table.entre {
 /* Open */
 table.open {
     border-collapse: separate;
-    border-spacing: 0 15px;
+    border-spacing: 15px 15px; /* horizontal, vertical */
     border: 0;
     margin: 0 auto;
-    padding: 0 65px 0 65px;
+    padding: 0 25px 0 25px;
     table-layout: auto;
     width: auto;
     text-wrap: wrap;
     font-family: "Montserrat", sans-serif;
-    font-size: 13px;
+    font-size: 0.85em;
 }
 
 .open {
@@ -145,7 +145,7 @@ table.open {
     }
 
     td, th {
-        padding: 25px 20px 0 0;
+        padding: 25px 5px 0 0;
         vertical-align: top;
     }
 
@@ -153,6 +153,10 @@ table.open {
         display: table;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    td.notes {
+        padding-left: 25px;
     }
 
     td {
