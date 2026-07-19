@@ -130,19 +130,31 @@ table.open {
     border-collapse: separate;
     border-spacing: 0 15px;
     border: 0;
-    margin-left: 7px;
-    margin-top: 65px;
-    table-layout: fixed;
-    width: 100%;
+    margin: 0 auto;
+    padding: 0 65px 0 65px;
+    table-layout: auto;
+    width: auto;
     text-wrap: wrap;
     font-family: "Montserrat", sans-serif;
+    font-size: 13px;
 }
 
 .open {
+    th {
+        text-align: left;
+    }
+
     td, th {
-        padding: 20px 0 0 0;
+        padding: 25px 20px 0 0;
         vertical-align: top;
     }
+
+    td.graph {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     td {
         word-wrap: normal;
         text-overflow: ellipsis;
