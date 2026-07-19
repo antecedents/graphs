@@ -1,0 +1,45 @@
+{
+    "columns": [
+        "from",
+        "to",
+        "abscissa",
+        "ordinate",
+        "name",
+        "level",
+        "url",
+        "popup"
+    ],
+    "data": [
+        [
+            "A & E",
+            "Predictions",
+            925,
+            725,
+            "Attendance forecasts per accident & emergency centre.",
+            "chapter",
+            "/pages/sections/predictions.html",
+            true
+        ],
+        [
+            "A & E",
+            "Decompositions",
+            825,
+            600,
+            "The approximate decomposition components of each weekly accident & emergency attendance time series.",
+            "chapter",
+            "/pages/sections/decompositions.html",
+            true
+        ],
+        [
+            "A & E",
+            "Measures",
+            775,
+            605,
+            "The raw measures, i.e., the weekly attendance counts per accident & emergency centre.",
+            "chapter",
+            "/pages/sections/measures.html",
+            true
+        ]
+    ],
+    "description": "Accident & Emergency"
+}

@@ -3,7 +3,7 @@
 var Highcharts;
 var optionSelected;
 var dropdown = $('#option_selector');
-var url = '../warehouse/measures/menu/menu.json';
+var url = '/warehouse/measures/menu/menu.json';
 
 
 $.getJSON(url, function (data) {
@@ -39,7 +39,7 @@ dropdown.on('change', function (e) {
 // Generate graphs
 function generateChart(fileNameKey){
 
-    $.getJSON('../warehouse/measures/points/' + fileNameKey + '.json', function (source)  {
+    $.getJSON('/warehouse/measures/points/' + fileNameKey + '.json', function (source)  {
 
 
         // split the data set into ...
@@ -59,7 +59,7 @@ function generateChart(fileNameKey){
         Highcharts.stockChart('container0005', {
 
             rangeSelector: {
-                selected: 5,
+                selected: 3,
                 verticalAlign: 'top',
                 floating: false,
                 inputPosition: {
@@ -71,12 +71,42 @@ function generateChart(fileNameKey){
                     y: 0
                 },
                 inputEnabled: true,
-                inputDateFormat: '%Y-%m-%d'
+                inputDateFormat: '%Y-%m-%d',
+                buttons: [
+                    {
+                        type: 'month',
+                        count: 6,
+                        text: '6m',
+                        title: '6 months'
+                    },
+                    {
+                        type: 'month',
+                        count: 18,
+                        text: '1.5y',
+                        title: '1.5 years'
+                    }, {
+                        type: 'year',
+                        count: 2,
+                        text: '2y',
+                        title: '2 years'
+                    }, {
+                        type: 'year',
+                        count: 5,
+                        text: '5y',
+                        title: '5 years'
+                    }, {
+                        type: 'all',
+                        text: 'All',
+                        title: 'All'
+                    }
+                ]
             },
 
             chart: {
                 type: 'spline',
-                zoomType: 'xy'
+                zoomType: 'xy',
+                width: 415,
+                height: 425
             },
 
             title: {
@@ -104,7 +134,10 @@ function generateChart(fileNameKey){
                     text: 'weekly<br>attendances',
                     x: 0
                 },
-                lineWidth: 2,
+                lineWidth: 1,
+                height: '90%',
+                minorGridLineWidth: 0,
+                gridLineWidth: 0.5,
                 resize: {
                     enabled: true
                 }
@@ -113,12 +146,14 @@ function generateChart(fileNameKey){
             xAxis: {
                 type: 'datetime',
                 dateTimeLabelFormats: {
-                    month: '%e. %b',
+                    day: '%d %b %Y',
+                    month: '%b %Y',
                     year: '%b %Y'
                 },
                 title: {
                     text: 'Date'
-                }
+                },
+               lineWidth: 0.5
             },
 
             caption: {
@@ -136,7 +171,13 @@ function generateChart(fileNameKey){
             },
 
             tooltip: {
-                split: true
+                split: true,
+                dateTimeLabelFormats: {
+                    day: ['%e %b, %Y', '%a, %e %b'],
+                    week: ['Week from %a, %e %b, %Y', '%a, %e %b'],
+                    month: ['%B %Y', '%B'],
+                    year: ['%Y', '%Y', '-%Y']
+                }
             },
 
             plotOptions: {
@@ -153,13 +194,9 @@ function generateChart(fileNameKey){
                     enabled: true,
                     units: groupingUnits,
                     dateTimeLabelFormats: {
-                        millisecond: ['%e %b, %H:%M:%S.%L', '%A, %b %e, %H:%M:%S.%L', '-%H:%M:%S.%L'],
-                        second: ['%e %b, %H:%M:%S', '%A, %b %e, %H:%M:%S', '-%H:%M:%S'],
-                        minute: ['%e %b, %H:%M', '%A, %b %e, %H:%M', '-%H:%M'],
-                        hour: ['%e %b, %H:%M', '%A, %b %e, %H:%M', '-%H:%M'],
-                        day: ['%e %b, %Y', '%A, %b %e', '-%A, %b %e, %Y'],
-                        week: ['Week from %A, %e %b, %Y', '%A, %b %e', '-%A, %b %e, %Y'],
-                        month: ['%B %Y', '%B', '-%B %Y'],
+                        day: ['Week starting %e %b, %Y', '%a, %e %b'],
+                        week: ['Week starting %a, %e %b, %Y', '%a, %e %b'],
+                        month: ['%B %Y', '%B'],
                         year: ['%Y', '%Y', '-%Y']
                     }
                 },

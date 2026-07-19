@@ -3,7 +3,7 @@
 var Highcharts;
 var optionSelected;
 var dropdown = $('#option_selector');
-var url = '../warehouse/variational/menu/menu.json';
+var url = '/warehouse/variational/menu/menu.json';
 
 
 $.getJSON(url, function (data) {
@@ -39,7 +39,7 @@ dropdown.on('change', function (e) {
 // Generate graphs
 function generateChart(fileNameKey){
 
-    $.getJSON('../warehouse/variational/points/predictions/' + fileNameKey + '.json', function (source)  {
+    $.getJSON('/warehouse/variational/points/predictions/' + fileNameKey + '.json', function (source)  {
 
         // https://api.highcharts.com/highstock/plotOptions.series.dataLabels
         // https://api.highcharts.com/class-reference/Highcharts.Point#.name
@@ -164,7 +164,7 @@ function generateChart(fileNameKey){
         Highcharts.stockChart('container0002', {
 
             rangeSelector: {
-                selected: 4,
+                selected: 2,
                 verticalAlign: 'top',
                 floating: false,
                 inputPosition: {
@@ -176,13 +176,41 @@ function generateChart(fileNameKey){
                     y: 0
                 },
                 inputEnabled: true,
-                inputDateFormat: '%Y-%m-%d'
+                inputDateFormat: '%Y-%m-%d',
+                buttons: [
+                    {
+                        type: 'month',
+                        count: 6,
+                        text: '6m',
+                        title: '6 months'
+                    },
+                    {
+                        type: 'month',
+                        count: 18,
+                        text: '1.5y',
+                        title: '1.5 years'
+                    }, {
+                        type: 'year',
+                        count: 2,
+                        text: '2y',
+                        title: '2 years'
+                    }, {
+                        type: 'year',
+                        count: 5,
+                        text: '5y',
+                        title: '5 years'
+                    }, {
+                        type: 'all',
+                        text: 'All',
+                        title: 'All'
+                    }
+                ]
             },
 
             chart: {
-                zoomType: 'xy'
-                // borderWidth: 2,
-                // marginRight: 100
+                zoomType: 'xy',
+                width: 445,
+                height: 695
             },
 
             title: {
@@ -244,7 +272,7 @@ function generateChart(fileNameKey){
                     x: 7
                 },
                 top: '65%',
-                height: '30%',
+                height: '25%',
                 offset: 0,
                 lineWidth: 2
             }
