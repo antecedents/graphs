@@ -1,0 +1,7 @@
+{
+  "description": [
+    {
+      "section": "This is a live system. It forecasts Accident & Emergency (A&E) attendance numbers weeks ahead. It runs every Tuesday evening, after Public Health Scotland (PHS) publishes the latest weekly Accident & Emergency counts; PHS updates the data every Tuesday.<br><br>For more information, including code, setup and configurations, etc. visit <a href='https://github.com/antecedents' class='btn btn-sm btn-outline-primary'>GitHub</a>"
+    }
+  ]
+}
