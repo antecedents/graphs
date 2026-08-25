@@ -48,13 +48,13 @@ $.getJSON(url, function (source) {
                         nodes['A & E'] = {
                             id: 'A & E',
                             marker: {
-                                radius: 35
+                                radius: 27
                             },
                             color: 'black',
                             dataLabels: {
-                                enabled: false,
+                                enabled: true,
                                 verticalAlign: 'middle',
-                                backgroundColor: 'contrast',
+                                backgroundColor: 'black',
                                 style: {
                                     textOutline: 'none'
                                 }
@@ -63,7 +63,14 @@ $.getJSON(url, function (source) {
                         nodes[link[1]] = {
                             id: link[1],
                             marker: {
-                                radius: 27
+                                radius: 18
+                            },
+                            dataLabels: {
+                                useHTML: true,
+                                style: {
+                                    textOutline: 'none'
+                                },
+                                format: "<span style='font-variant: all-small-caps;'>{point.name}</span>"
                             },
                             color: colour
                         };
@@ -72,13 +79,14 @@ $.getJSON(url, function (source) {
                             id: 'INTRODUCTION',
                             marker: {
                                 symbol: symbols.get(link[i_level]),
-                                radius: 35
+                                radius: 27
                             },
                             color: '#F19E39',
                             dataLabels: {
                                 enabled: false,
                                 verticalAlign: 'top',
                                 backgroundColor: 'contrast',
+                                useHTML: true,
                                 style: {
                                     textOutline: 'none'
                                 }
@@ -91,6 +99,12 @@ $.getJSON(url, function (source) {
                                 symbol: symbols.get(link[i_level]),
                                 lineWidth: 0,
                                 radius: 9
+                            },
+                            dataLabels: {
+                                useHTML: true,
+                                style: {
+                                    textOutline: 'none'
+                                }
                             },
                             color: colour
                         };
@@ -128,12 +142,12 @@ $.getJSON(url, function (source) {
                 keys: source['columns'],
                 layoutAlgorithm: {
                     maxIterations: 180,
-                    enableSimulation: true,
-                    linkLength: 360,
-                    friction: -0.9,
+                    enableSimulation: false,
+                    linkLength: 185,
+                    friction: -0.5,
                     gravitationalConstant:
                         document.getElementById(space).scrollWidth < 500 ?
-                            0.2 : 0.06
+                            0.2 : 0.05
                 },
                 allowPointSelect: true,
                 point: {
